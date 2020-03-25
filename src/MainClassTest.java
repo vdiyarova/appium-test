@@ -16,4 +16,15 @@ public class MainClassTest extends MainClass{
 
         Assert.assertTrue("Number less than 45", classNumber > 45);
     }
+
+    @Test
+    public void testGetClassString(){
+        String classString = this.getClassString();
+        boolean result1, result2;
+
+        result1 = classString.contains("Hello");
+        result2 = classString.contains("hello");
+        Assert.assertTrue("Strings 'hello' or 'Hello' are not contained in a string: " + classString, result1||result2);
+    }
+
 }
